@@ -59,8 +59,8 @@ jobs:
       sed -i "s/todo-app:.*/todo-app:$buildtag/g" kube-manifest/deployment.yaml
 
       # Commit and push changes using GitHub PAT
-      git config user.email "$(GITHUB_EMAIL)"
-      git config user.name "Maaz Patel"
+      git config - global user.email "$(GITHUB_EMAIL)"
+      git config - global user.name "Maaz Patel"
       git add .
       git commit -m "Update image tag to $buildtag"
       git push origin HEAD:main
