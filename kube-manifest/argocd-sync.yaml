@@ -8,7 +8,7 @@ spec:
 
   source:
     repoURL: https://github.com/maazpatel24/ToDo_Application.git
-    targetRevision: HEAD
+    targetRevision: feature/update_image_tag
     path: kube-manifest
   destination: 
     server: https://kubernetes.default.svc
