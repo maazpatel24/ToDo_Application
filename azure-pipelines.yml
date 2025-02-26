@@ -52,7 +52,8 @@ jobs:
   steps:
   - script: |
       # # Clone the Kubernetes manifest repository
-      # git clone https://$(GITHUB_PAT)@github.com/maazpatel24/ToDo_Application.git
+      # Use GitHub PAT for authentication
+      git remote set-url origin https://$(GITHUB_PAT)@github.com/maazpatel24/ToDo_Application.git
       
       # Update the image tag in the Kubernetes manifest files
       buildtag="$(Build.BuildNumber)"
