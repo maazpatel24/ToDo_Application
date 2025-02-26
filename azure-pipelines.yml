@@ -55,6 +55,7 @@ jobs:
       # Use GitHub PAT for authentication
       git remote set-url origin https://$(GITHUB_PAT)@github.com/maazpatel24/ToDo_Application.git
       
+      git pull origin HEAD:main
       # Update the image tag in the Kubernetes manifest files
       buildtag="$(Build.BuildNumber)"
       sed -i "s/todo-app:.*/todo-app:$buildtag/g" kube-manifest/deployment.yaml
